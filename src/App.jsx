@@ -16,10 +16,12 @@ function App() {
     setHappyMessage("IT WOOOORKS!!!!!");
   };
 
+  //denna kategori sätts baserat på vilken flik man är inne på.
   const categorySetter = (title) => {
     setCategory(title);
   };
 
+  //när man trycker på plus sätts rätt komponent baserat på kategorivärde.
   const renderComponent = (title) => {
     switch (title) {
       case "äpple":
@@ -38,7 +40,10 @@ function App() {
 
   return (
     <>
+      /* navbar tar emot funktionen till plusknappen som sätter rätt komponent*/
       <Navbar renderComponent={() => renderComponent(category)} />
+      /* Simulerar flikmenyn, baserat på vad man klickar sätter vi vald
+      kategori*/
       <button onClick={() => categorySetter("äpple")}>äpple</button>
       <button onClick={() => categorySetter("päron")}>päron</button>
       <button onClick={() => categorySetter("banan")}>banan</button>
