@@ -16,7 +16,7 @@ function App() {
     setHappyMessage("IT WOOOORKS!!!!!");
   };
 
-  //denna kategori sätts baserat på vilken flik man är inne på.
+  // denna kategori sätts baserat på vilken flik man är inne på.
   const categorySetter = (title) => {
     setCategory(title);
   };
@@ -40,9 +40,9 @@ function App() {
 
   return (
     <>
-      /* navbar tar emot funktionen till plusknappen som sätter rätt komponent*/
+      {/* navbar tar emot funktionen till plusknappen som sätter rätt komponent*/}
       <Navbar renderComponent={() => renderComponent(category)} />
-      /* Simulerar flikmenyn, baserat på vad man klickar sätter vi vald
+      {/* Simulerar flikmenyn, baserat på vad man klickar sätter vi vald */}
       kategori*/
       <button onClick={() => categorySetter("äpple")}>äpple</button>
       <button onClick={() => categorySetter("päron")}>päron</button>
